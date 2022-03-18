@@ -6,7 +6,7 @@
 
 function testimonialSlider(){
     const carouselOne = document.getElementById('carouselOne');
-    if(carouselOne){
+    if(carouselOne){ /* if the element exists*/
         carouselOne.addEventListener('slid.bs.carousel', function() {
             const activeItem = this.querySelector(".active");
             document.querySelector(".js-testimonial-img").src =
