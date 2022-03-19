@@ -197,7 +197,19 @@ h3{
 /* 13. = video modal*/
 
 /* 14. = pagination*/
-
+.page-item.disabled .page-link,
+.page-link{
+    border: none;
+    background-color: transparent;
+    color: var(--black-70);
+}
+.page-item.active .page-link{
+    background-color: var(--main-color);
+}
+.page-link:hover{
+    background-color: var(--main-color);
+    color: var(--WHITE);
+}
 /* 15. =breadcrumb*/
 .breadcrumb-nav{
   padding: 10px 0;
@@ -248,8 +260,8 @@ h3{
     font-weight: 700;
     color: var(--black-70);
 }
-.header.logo span{
-    color:var(--main-color);
+.header-logo span{
+    color: var(--main-color);
 }
 .header .menu-item{
     display: inline-block;
