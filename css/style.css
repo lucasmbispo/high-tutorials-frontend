@@ -627,5 +627,15 @@ h3{
   margin-left: 5px;
 }
 
+/* course tabs*/
+.course-tabs{
+  margin: 30px 0 20px;
+}
+.course-tabs .nav-link{
+  margin: 0 10px 10px 0;
+
+}
+
+
 
 /* 27. =contact section*/
