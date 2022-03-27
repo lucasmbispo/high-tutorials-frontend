@@ -1,7 +1,4 @@
 
-
-
-
 /* testimonial slider */
 
 function testimonialSlider(){
@@ -32,3 +29,38 @@ function coursePreviewVideo(){
   }
 }
 coursePreviewVideo();
+
+/* style switcher*/
+
+function styleSwitcherToggle(){
+  const styleSwitcher = document.querySelector(".js-style-switcher")
+  styleSwitcherToggler = document.querySelector(".js-style-switcher-toggler");
+
+  styleSwitcherToggler.addEventListener("click", function(){
+    styleSwitcher.classList.toggle("open");
+    this.querySelector("i").classList.toggle("fa-times");
+    this.querySelector("i").classList.toggle("fa-cog");
+  });
+}
+styleSwitcherToggle();
+
+/* Theme Colors*/
+function themeColors(){
+  const colorStyle = document.querySelector(".js-color-style"),
+  themeColorsContainer = document.querySelector(".js-theme-colors");
+
+  themeColorsContainer.addEventListener("click", ({
+    target}) => {
+    if(target.classList.contains("js-theme-color-item")){
+      localStorage.setItem("color", target.getAttribute("data-js-theme-color"));
+      setColor();
+    }
+
+    function setColor() {
+      let path = colorStyle.getAttribute("href").split("/");
+
+    }
+  });
+
+}
+themeColors();
