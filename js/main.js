@@ -6,8 +6,7 @@ function testimonialSlider(){
     if(carouselOne){ /* if the element exists*/
         carouselOne.addEventListener('slid.bs.carousel', function() {
             const activeItem = this.querySelector(".active");
-            document.querySelector(".js-testimonial-img").src =
-            activeItem.getAttribute("data-js-testimonial-img");
+            document.querySelector(".js-testimonial-img").src = activeItem.getAttribute("data-js-testimonial-img");
         })
     }
 }
@@ -55,12 +54,15 @@ function themeColors(){
       localStorage.setItem("color", target.getAttribute("data-js-theme-color"));
       setColor();
     }
-
-    function setColor() {
-      let path = colorStyle.getAttribute("href").split("/");
-
-    }
   });
 
+    function setColor(){
+      let path = colorStyle.getAttribute("href").split("/");
+      path = path.slice(0, path.length-1);
+      colorStyle.setAttribute("href", path.join("/") + "/" + localStorage.getItem("color") + ".css");
+
+      if(document.querySelector(".js-theme-color-active"));
+        document.querySelector(".js-theme-color-item.active").classList-remove()
+    }
 }
 themeColors();
