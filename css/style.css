@@ -57,6 +57,18 @@
 
 /* 03. =overrides variables for - theme dark*/
 
+body.t-dark{
+  --body-bg-color: hsl(240, 10%, 19%);
+  --black-70: hsl(0,0%, 87%);
+  --black-90: hsl(0, 0%, 100%);
+  --shadow: 0 0 10px hsla(0, 0%, 0%, 0.08);
+  --white: hsl(240, 8%, 21%);
+  --select-box-bg-color: hsl(240, 8%, 21%);
+  --border-color-2: hsl(240, 9%, 25%);
+  --border-color-1: hsl(240, 9%, 30%);
+}
+
+
 /* 04. =base*/
 body{
     background-color: var(--body-bg-color);
@@ -67,6 +79,7 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
 }
+
 a{
     color: var(--main-color);
     text-decoration: none;
@@ -265,7 +278,8 @@ textarea.form-control{
 }
 
 .video-modal .modal-content{
-  border: 0;
+  border: none;
+
 }
 
 
@@ -388,6 +402,7 @@ textarea.form-control{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .theme-colors button.active::before{
