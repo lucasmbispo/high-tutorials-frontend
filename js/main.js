@@ -1,4 +1,16 @@
 
+window.addEventListener("load", () => {
+  /* Page loader */
+  document.querySelector(".js-page-loader").classList.add("fade-out");
+  setTimeout(() => {
+    document.querySelector(".js-page-loader").style.display = "none"
+  }, 600);
+});
+
+
+
+
+
 /* testimonial slider */
 
 function testimonialSlider(){
@@ -28,11 +40,15 @@ function coursePreviewVideo(){
   }
 }
 coursePreviewVideo();
+
 /* header menu */
+
 function headerMenu(){
   const menu = document.querySelector(".js-header-menu"),
   backdrop = document.querySelector(".js-header-backdrop"),
   menuCollapseBreakpoint = 991;
+
+
 
   function toggleMenu(){
     menu.classList.toggle("open");
@@ -44,6 +60,10 @@ function headerMenu(){
     item.addEventListener("click", toggleMenu);
 
   });
+
+  // close the menu by clicking outside of it
+
+  backdrop.addEventListener("click", toggleMenu);
 
   function collapse(){
     menu.querySelector(".active .js-sub-menu").removeAttribute("style");
@@ -74,10 +94,19 @@ function headerMenu(){
       target.nextElementSibling.style.maxHeight =
       target.nextElementSibling.scrollHeight + "px";
     }
-  })
+  });
+
+  // when resizing window
+  window.addEventListener("resize", function() {
+    if(this.innerWidth > menuCollapseBreakpoint && menu.classList.contains("open")){
+    toggleMenu();
+    }
+    if(this.innerWidth > menuCollapseBreakpoint && menu.querySelector(".active")){
+      collapse();
+    }
+  });
 }
 headerMenu();
-
 
 /* style switcher*/
 
@@ -124,7 +153,6 @@ function themeColors() {
   }
 }
 themeColors();
-
 
 /* theme light & dark mode */
 

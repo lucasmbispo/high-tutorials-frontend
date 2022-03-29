@@ -64,7 +64,7 @@
         width: 300px;
         height: 100vh;
         top: 0;
-        right: -300;
+        right: -300px;
         z-index: 1000;
         padding: 70px 0 50px;
         transition: all 0.5s ease;
@@ -73,7 +73,7 @@
         overflow-y: auto;
         visibility: hidden;
     }
-    .header-menu-open{
+    .header-menu.open{
         right: 0;
         visibility: visible;
     }
@@ -125,12 +125,126 @@
         visibility: hidden;
         background-color: var(--white);
     }
+  .header-backdrop.active{
+    visibility: visible;
+    opacity: 0.8;
+  }
+
+  .circular-img{
+    max-width: 280px;
+  }
+
+  .circular-img img{
+    max-width: 240px;
+  }
+
+  .circular-img-circle{
+    height: 280px;
+    width: 280px;
+  }
+
+  .banner-text h1{
+    font-size: 35px;
+  }
+
+  .section-title .sub-title{
+    font-size: 30px;
+  }
+
+  .course-sidebar{
+    margin-top: 30px;
+  }
+
+  .course-instructor .img-box img{
+    width: 100px;
+  }
+
 }
 
 @media(max-width: 767px){
+  .container{
+    --bs-gutter-x: 15px;
 
+  }
+
+  .box{
+    padding: 20px 15px;
+  }
+
+  .banner-text h1{
+    font-size: 24px;
+  }
+
+  .bai-section{
+    text-align: center;
+  }
+
+  .section-title .title,
+  h3,
+  .banner-text h2{
+    font-size: 18px;
+  }
+
+  .section-title .sub-title{
+    font-size: 22px;
+  }
+
+  .course-header h2{
+    font-size: 24px;
+  }
+
+  .course-curriculum .accordion-button span{
+    position: relative;
+    right: auto;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .course-curriculum .accordion-button{
+    padding-right: 15px;
+  }
+  .course-curriculum ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .course-curriculum ul li span{
+    font-size: 12px;
+    position: relative;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .course-curriculum ul li{
+    padding: 0 0 0 20px;
+
+  }
+  .rating-box{
+    margin-bottom: 15px;
+  }
+  .rating-summary{
+    margin-bottom: 15px;
+  }
 }
 
 @media(max-width: 575px){
+  .circular-img{
+    max-width: 230px;
+  }
+  .circular-img img{
+    max-width: 200px;
+  }
+  .circular-img-circle{
+    width: 230px;
+    height: 230px;
+  }
+  .footer-item{
+    text-align: center;
+  }
+  .header-logo a{
+  font-size: 22px;
+  }
+  .modal-dialog{
+    margin: 8px 15px;
+  }
+
 
 }
