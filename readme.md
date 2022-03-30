@@ -1,4 +1,4 @@
-Full website template designed from scratch
-Tutor: The WebShala
+Full website template designed from scratch <br/>
+Tutor: The WebShala</br>
 
 HTML5, CSS3, Bootstrap, Javascript
